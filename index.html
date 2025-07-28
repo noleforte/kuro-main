@@ -374,7 +374,7 @@
                            );
 
                         const data = await response.json();
-                        const reply = data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content ? data.choices[0].message.content : 'No answer';
+                        const reply = data.reply || 'No answer';
 
                         messagesDiv.removeChild(botTypingMessage);
                         const botMessage = document.createElement('div');
